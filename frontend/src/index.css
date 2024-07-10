@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+  }
+  
+a{
+    text-decoration: none;
+  }
+
+  .poppins-regular {
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .color-blue {
+    background-color: #3572EF;
+  }
+
+  .color-lightblue {
+    background-color:#A7E6FF;
+  }
+
+  .color-mediumblue{
+    background-color : #3ABEF9
+  }
+
+  .color-lightgreen{
+    background-color :#6FDCE3;
+  }
+  .color-bookbutton{
+    background-color:#00C4D0;
+  }
+
+  .color-green{
+    background-color: #68D2E8;
+  }
+
+  .color-main{
+    background-color:#EAF0FD;
+  }
+
+  .border-bookbutton {
+    border: 4px solid #00C4D0;
+  }
+
+  .text-lightgreen{
+    color: #6FDCE3;
+  }
+  
+  .text-bookbutton{
+    color: #00C4D0;
+  }
+  .color-speciality{
+    color : #137379
+  }
+
+  .speciality-background{
+    background-color: #00939b !important;
+  }
+
+  .button-selected {
+    background-color: #6FDCE3 !important;
+  }
+
+
+ .secondary-button {
+    border: unset;
+    color: white;
+    z-index: 1;
+    background: #00C4D0;
+    position: relative;
+
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   
+.secondary-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #00939b;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+
+   
+
+  .secondary-button:hover {
+    color: white;
+   }
+   
+
+  .secondary-button:hover::before {
+    width: 100%;
+   }
+
+
+   .lightblue{
+    color:#338AFF;
+   }
+
+   .button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .top:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+  }
+  
+  .top:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .top::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .top:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  
+
+  .form .btn:active {
+  box-shadow: inset 0px 4px 5px #0070f0, inset 0px -4px 5px #002cbb;
+  transform: scale(0.995);
+}
+
+
+
+.input-container {
+
+  position: relative;
+}
+.input-label {
+  position: absolute;
+  top: -10px; /* Adjust this value to position the label as desired */
+  left: 10px;
+  background-color: white; /* This ensures the label covers the border */
+  padding: 0 5px;
+
+
+  z-index: 1; /* Ensure label appears above the input field */
+}
+
+.border-class {
+    border: 3px solid #00C4D0;
+    border-right: none;
+}
+
+/* .auth-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-image-container {
+  width: 50%;
+}
+
+.auth-form-container {
+  width: 50%;
+  position: relative;
+} */
+
+.auth-form {
+
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.auth-show {
+
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 1;
+}
+
+.auth-hide {
+  transform: translateX(100%);
+  
+  opacity: 0;
+  z-index: 0;
+}
+
+
+.selected{
+  background-color: #137379;
+}
+
+
+
+.auth-button {
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #6FDCE3;
+}
+
+.main-button {
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #EAF0FD;
+}
+
+
+/*.rating:not(:checked) > input {*/
+/*  position: absolute;*/
+/*  appearance: none;*/
+/*}*/
+
+/*.rating:not(:checked) > label {*/
+/*  float: right;*/
+/*  cursor: pointer;*/
+/*  font-size: 1.2rem;*/
+/*  fill: #666;*/
+/*}*/
+
+/*.rating:not(:checked) > label > svg {*/
+/*  fill: #666; !* Set default color for SVG *!*/
+/*  transition: fill 0.3s ease; !* Add a transition effect *!*/
+/*}*/
+
+/*.rating > input:checked + label:hover,*/
+/*.rating > input:checked + label:hover ~ label,*/
+/*.rating > input:checked ~ label:hover,*/
+/*.rating > input:checked ~ label:hover ~ label,*/
+/*.rating > label:hover ~ input:checked ~ label {*/
+/*  fill: #e58e09;*/
+/*}*/
+
+/*.rating:not(:checked) > label:hover,*/
+/*.rating:not(:checked) > label:hover ~ label {*/
+/*  fill: #ff9e0b;*/
+/*}*/
+
+/*.rating > input:checked ~ label > svg {*/
+/*  fill: #ffa723; !* Set color for selected stars *!*/
+/*}*/
+
+
+
+
+
+
